@@ -1,152 +1,62 @@
-/* Basic reset and body styles */
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333333;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    text-align: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    width: 100%;
+  background-color: #4caf50;
+  padding: 20px;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 nav {
-    background-color: #34495e;
-    text-align: center;
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
+  background-color: #2e7d32;
+  padding: 10px;
 }
 
 nav a {
-    color: white;
-    text-align: center;
-    display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
 }
 
-/* Main content area */
+/* Main Content Styles */
 main {
-    width: 80%;
-    background-color: white;
-    text-align: left;
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-family: Georgia, serif;
-    color: #2c3e50;
-    text-align: left;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-}
-
-/* Paragraphs */
-p {
-    color: #666666;
-    text-align: left;
-    line-height: 1.6;
-}
-
-/* Links */
-a {
-    color: #3498db;
-    text-align: center;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    width: 100%;
+  background-color: #333333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Sidebar or aside */
-aside {
-    width: 30%;
-    background-color: #ecf0f1;
-    text-align: left;
-    display: inline-block;
+footer a {
+  color: #81c784;
 }
 
-/* Articles or content sections */
-article {
-    width: 65%;
-    display: inline-block;
-    text-align: left;
+/* List Item Styles */
+li {
+  display: inline;
+  width: 100px;
 }
 
-/* Button-like elements */
-.button {
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    width: 150px;
+/* Heading Styles */
+h1 {
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #ffffff;
 }
 
-/* Form elements */
-input, textarea {
-    width: 100%;
-    background-color: white;
-    color: #333333;
-    display: block;
-}
-
-/* Image containers */
-.image-container {
-    width: 100%;
-    text-align: center;
-    display: block;
-}
-
-/* Utility classes for different alignments */
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-/* Display properties */
-.block {
-    display: block;
-}
-
-.inline {
-    display: inline;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-/* Width utilities */
-.full-width {
-    width: 100%;
-}
-
-.half-width {
-    width: 50%;
+/* Paragraph Styles */
+p {
+  line-height: 1.6;
 }
