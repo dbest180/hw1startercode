@@ -1,1 +1,152 @@
+/* Basic reset and body styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    text-align: left;
+}
 
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #34495e;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+/* Main content area */
+main {
+    width: 80%;
+    background-color: white;
+    text-align: left;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: #2c3e50;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/* Paragraphs */
+p {
+    color: #666666;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Sidebar or aside */
+aside {
+    width: 30%;
+    background-color: #ecf0f1;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Articles or content sections */
+article {
+    width: 65%;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Button-like elements */
+.button {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+
+/* Form elements */
+input, textarea {
+    width: 100%;
+    background-color: white;
+    color: #333333;
+    display: block;
+}
+
+/* Image containers */
+.image-container {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+/* Utility classes for different alignments */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Display properties */
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Width utilities */
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
