@@ -60,3 +60,49 @@ h1 {
 p {
   line-height: 1.6;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  header {
+    padding: 15px 10px;
+  }
+  
+  header img {
+    width: 150px;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  nav ul {
+    padding: 0;
+  }
+  
+  nav li {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px 15px;
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  footer {
+    padding: 15px 10px;
+    font-size: 0.9em;
+  }
+}
