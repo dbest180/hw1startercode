@@ -1,40 +1,538 @@
-/* Modern Clean Styling */
+/* 🔥 ULTIMATE MODERN STYLING - LEVEL 11 🔥 */
 
-/* 1. Body Styles - Clean, readable typography */
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
+/* Custom Properties for Easy Theming */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --accent-gradient: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  --surface-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --dark-gradient: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-light: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
 
-/* 2. Header Styles - Modern gradient with depth */
-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 2rem 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Smooth Scrolling & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* 1. Body - Premium Typography & Background */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--surface-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
   position: relative;
 }
 
+/* Animated Background Orbs */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+  animation: float 20s ease-in-out infinite;
+}
+
+body::before {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #667eea, transparent);
+  top: -250px;
+  right: -250px;
+  animation-delay: -5s;
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #764ba2, transparent);
+  bottom: -200px;
+  left: -200px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* 2. Header - Stunning Gradient with Depth */
+header {
+  background: var(--primary-gradient);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Accent Bar */
 header::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -100%;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  background: var(--accent-gradient);
+  animation: slideIn 1s ease forwards;
 }
 
-/* 3. Navigation Styles - Clean, modern nav */
+@keyframes slideIn {
+  to { left: 0; }
+}
+
+/* Header Image Styling */
+header img {
+  display: block;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  max-width: 200px;
+  height: auto;
+}
+
+header img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* 3. Navigation - Glassmorphism Effect */
 nav {
-  background-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated underline effect */
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::before {
+  width: 80%;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+nav a:active {
+  transform: translateY(0);
+}
+
+/* 4. Main Content - Elevated Card Design */
+main {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  font-size: 18px;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle inner glow */
+main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Grid Styling */
+main div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+main div img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+main div img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(102, 126, 234, 0.5);
+  filter: brightness(1.05);
+}
+
+/* 5. Footer - Premium Dark Mode */
+footer {
+  background: var(--dark-gradient);
+  color: var(--text-light);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 5rem;
+  border-top: 3px solid #667eea;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient overlay */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  to { left: 100%; }
+}
+
+footer p {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+footer a {
+  color: #90cdf4;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+footer a:hover {
+  color: #63b3ed;
+  transform: translateY(-2px);
+}
+
+/* 6. List Items - Already styled in nav */
+
+/* 7. Headings - Eye-Catching Typography */
+h1 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h2, h3, h4 {
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-left: 1rem;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* 8. Paragraphs - Beautiful Reading Experience */
+p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+p a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+p a:hover {
+  color: #764ba2;
+  border-bottom-color: #764ba2;
+}
+
+/* General Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: var(--text-primary);
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive Design - Mobile Excellence */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body::before,
+  body::after {
+    display: none; /* Remove floating orbs on mobile for performance */
+  }
+  
+  header {
+    padding: 1.5rem 1rem;
+  }
+  
+  header img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  nav {
+    padding: 0.75rem 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  nav li {
+    display: block;
+    width: 100%;
+  }
+  
+  nav a {
+    display: block;
+    padding: 0.875rem 1rem;
+    text-align: center;
+    border-radius: var(--radius-sm);
+  }
+  
+  main {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+  
+  main div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  main div img {
+    height: 200px;
+  }
+  
+  footer {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  h2, h3, h4 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+  
+  main div img {
+    height: 180px;
+  }
+  
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+  
+  header,
+  nav,
+  footer {
+    background: none;
+    color: black;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  main {
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
